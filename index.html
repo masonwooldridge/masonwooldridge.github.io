@@ -5,27 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mason Wooldridge's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav id="navbar">
             <ul>
-                <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li> <!-- Updated -->
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero">
-        <h1>Mason Wooldridge</h1>
-        <p>Computer Science Student | Aspiring Software Engineer</p>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Mason, a student at the University of Kentucky studying Computer Science, Math, and Mathematical Economics. I enjoy playing basketball, tennis, and volleyball, and I'm passionate about AI and software engineering.</p>
+        <h2 id="hero-h2">Hello! I'm Mason Wooldridge, a student at the University of Kentucky studying Computer Science, Math, and Mathematical Economics. I enjoy playing basketball, tennis, and volleyball, and I'm passionate about AI and software engineering.</h2>
+        <a href="https://www.linkedin.com/in/mason-wooldridge" target="_blank">
+            <button class="hero-buttons" id="linkedin-main">LinkedIn <i class="fab fa-linkedin"></i></button>
+        </a>
+        <a href="https://github.com/masonwooldridge" target="_blank">
+            <button class="hero-buttons" id="github-main">GitHub <i class="fab fa-github"></i></button>
+        </a>
+        <a href="https://www.instagram.com/mason__wooldridge/" target="_blank">
+            <button class="hero-buttons" id="instagram-main">Instagram <i class="fab fa-instagram"></i></button>
+        </a>
     </section>
 
     <section id="projects">
@@ -33,7 +37,7 @@
         <div class="project-card">
             <h3>Portfolio Website</h3>
             <h4>Skills Used: HTML, CSS, JavaScript</h4>
-            <p>Description of the project. What it does, technologies used, etc.</p>
+            <p>Personal portfolio website to showcase coding skills and provide additional info beyond my resume.</p>
             <a href="https://masonwooldridge.github.io/" target="_blank">
                 <button class="github-button">Visit My GitHub</button>
             </a>
@@ -41,7 +45,7 @@
         <div class="project-card">
             <h3>Who Wants To Be A Millionaire</h3>
             <h4>Skills Used: HTML, CSS, JavaScript</h4>
-            <p>Description of the project. What it does, technologies used, etc.</p>
+            <p>Developed an interactive game website featuring dynamic question progression and score system.</p>
             <a href="https://masonwooldridge.github.io/Who-Wants-To-Be-A-Millionaire/" target="_blank">
                 <button class="github-button">Visit My GitHub</button>
             </a>
@@ -51,6 +55,16 @@
     <section id="experience">
         <h2>Experience</h2>
         <div class="experience-card">
+            <h3>Computer Science Lab Assistant</h3>
+            <h4>University of Kentucky</h4>
+            <p>I reviewed, graded, and gave helpful feedback on all assignments in the course. In the weekly in-person labs, I helped students understand difficult concepts, debug their code, and work on their problem-solving abilities. I also had a weekly office hour where I encouraged students to ask meaningful questions and seek guidance.</p>
+            <h5>Aug 2024 - Present</h5>
+        </div>
+        <div class="experience-card">
+            <h3>Work Title 2</h3>
+            <p>Description of the project. What it does, technologies used, etc.</p>
+        </div>
+        <div class="experience-card">
             <h3>Work Title 1</h3>
             <p>Description of the project. What it does, technologies used, etc.</p>
         </div>
@@ -59,6 +73,14 @@
             <p>Description of the project. What it does, technologies used, etc.</p>
         </div>
     </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div id="education-card" class="experience-card">
+            <img src="images/uky.jpeg" alt="UKY Logo">
+        </div>
+    </section>
+    
 
     <section id="contact">
         <h2>Contact</h2>

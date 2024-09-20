@@ -8,6 +8,7 @@
 body {
     line-height: 1.6;
     color: #333;
+    background-color: rgb(255, 251, 251);
 }
 
 header {
@@ -51,19 +52,40 @@ nav ul li a.active {
 #hero {
     text-align: center;
     padding: 150px 20px 60px;
-    background: linear-gradient(270deg, #1a2a6c, #b21f1f, #fdbb2d);
-    background-size: 600% 600%; /* Enlarged background size for smooth animation */
+    background: linear-gradient(270deg, #d98dff, #b21f1f, #fdbb2d, #6fdab1, #465efa);
+    background-size: 600% 600%;
     animation: backgroundAnimation 16s ease infinite;
     color: #fff;
 }
 
-#hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+.hero-buttons {
+    background-color: rgb(94, 173, 215);
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 20px;
 }
 
-#hero p {
-    font-size: 1.2em;
+#linkedin-main {
+    background-color: rgb(45, 124, 167);
+}
+
+#github-main {
+    background-color: white;
+}
+
+#instagram-main {
+    background: linear-gradient(160deg, #9f17b7, #d93a3a, #fdbb2d);
+
 }
 
 @keyframes backgroundAnimation {
@@ -84,16 +106,16 @@ section {
     margin: 0 auto;
 }
 
+#hero-h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
 h2 {
     margin-bottom: 15px;
     color: #333;
     text-align: center;
-}
-
-#about p {
-    width: 50vw;
-    text-align: center;
-    margin: auto;
 }
 
 .project-card, .experience-card {
@@ -124,7 +146,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-#projects, #experience {
+#projects, #experience, #education {
     margin: auto;
     max-width: 800px;
 }
@@ -160,3 +182,6 @@ footer p {
     margin: 0;
 }
 
+h5 {
+    margin-top: 20px;
+}
