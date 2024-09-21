@@ -85,7 +85,18 @@ nav ul li a.active {
 
 #instagram-main {
     background: linear-gradient(160deg, #9f17b7, #d93a3a, #fdbb2d);
+}
 
+#linkedin-main:hover {
+    background-color: rgb(28, 80, 128);
+}
+
+#github-main:hover {
+    background-color: rgb(180, 180, 180);
+}
+
+#instagram-main:hover {
+    background: linear-gradient(160deg, #79118b, #9e2929, #9b721a);
 }
 
 @keyframes backgroundAnimation {
