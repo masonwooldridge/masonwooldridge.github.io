@@ -99,6 +99,15 @@ nav ul li a.active {
     background: linear-gradient(160deg, #79118b, #9e2929, #9b721a);
 }
 
+#email-main {
+    background-color: #D44638; 
+    color: #fff;
+}
+
+#email-main:hover {
+    background-color: #A13328;
+}
+
 @keyframes backgroundAnimation {
     0% {
         background-position: 0% 50%;
@@ -162,6 +171,35 @@ h2 {
     max-width: 800px;
 }
 
+.education-content {
+    display: flex;
+    align-items: center;
+}
+
+.education-content img {
+    width: 25%; /* Adjust this value to control the image width */
+    height: auto;
+    margin-right: 20px;
+}
+
+.education-text {
+    width: 75%; /* Adjust this value to control the text width */
+}
+
+@media (max-width: 768px) {
+    .education-content {
+        flex-direction: column;
+    }
+    .education-content img,
+    .education-text {
+        width: 100%;
+    }
+    .education-content img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
 .github-button {
     background-color: rgb(215, 94, 94);
     color: black;
@@ -181,6 +219,7 @@ h2 {
     background-color: #ad2525;
 }
 
+/*
 footer {
     background-color: #333;
     color: #fff;
@@ -192,7 +231,7 @@ footer {
 footer p {
     margin: 0;
 }
-
+*/
 h5 {
     margin-top: 20px;
 }
