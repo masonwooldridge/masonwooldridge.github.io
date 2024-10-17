@@ -69,7 +69,90 @@ document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem('theme') === 'dark') {
         body.classList.add('dark-mode');
         themeToggle.textContent = 'Light Mode';
+    } else {
+        themeToggle.textContent = 'Dark Mode';
     }
+
+    const particlesConfigLight = {
+        particles: {
+            number: { value: 100 },
+            color: { value: ["#0000ff", "#ff00ff", "#dd00ee"] },
+            shape: {
+                type: ["circle"]
+            },
+            opacity: {
+                value: 0.7,
+                random: true
+            },
+            size: {
+                value: 4,
+                random: true
+            },
+            line_linked: {
+                enable: false
+            },
+            move: {
+                speed: 2,
+                out_mode: "bounce"
+            }
+        },
+        interactivity: {
+            events: {
+                onhover: { enable: true, mode: "bubble" },
+                onclick: { enable: true, mode: "push" }
+            },
+            modes: {
+                bubble: {
+                    distance: 200,
+                    size: 8,
+                    duration: 2,
+                    opacity: 0.8,
+                    speed: 3
+                },
+                push: {
+                    particles_nb: 4
+                }
+            }
+        },
+        retina_detect: true
+    };
+
+    const particlesConfigDark = {
+        particles: {
+            number: { value: 80 },
+            color: { value: "#ffffff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5 },
+            size: { value: 3 },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 1
+            },
+            move: { speed: 2 }
+        },
+        interactivity: {
+            events: {
+                onhover: { enable: true, mode: "repulse" }
+            }
+        }
+    };
+
+    function initParticles() {
+        if (window.pJSDom && window.pJSDom.length > 0) {
+            window.pJSDom[0].pJS.fn.vendors.destroypJS();
+            window.pJSDom = [];
+        }
+
+        const currentTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+        const particlesConfig = currentTheme === 'dark' ? particlesConfigDark : particlesConfigLight;
+
+        particlesJS('particles-js', particlesConfig);
+    }
+
+    initParticles();
 
     themeToggle.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
@@ -80,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
             themeToggle.textContent = 'Dark Mode';
             localStorage.setItem('theme', 'light');
         }
+        initParticles();
     });
 
     const faders = document.querySelectorAll('.fade-in');
@@ -137,4 +221,5 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('FAILED...', error);
         });
     });
+    
 });
