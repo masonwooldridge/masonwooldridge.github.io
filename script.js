@@ -47,14 +47,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const text = "Hello! I'm Mason Wooldridge, a student at the University of Kentucky studying Computer Science, Math, and Mathematical Economics. I enjoy playing basketball, tennis, and volleyball, and I'm passionate about AI and software engineering.";
+    const heroH2 = document.getElementById('hero-h2');
+    const text = (heroH2?.textContent || '').trim();
     let index = 0;
     const speed = 40;
-    const heroH2 = document.getElementById('hero-h2');
-    heroH2.textContent = '';
+    if (heroH2) heroH2.textContent = '';
 
     function typeWriter() {
-        if (index < text.length) {
+        if (heroH2 && index < text.length) {
             heroH2.textContent += text.charAt(index);
             index++;
             setTimeout(typeWriter, speed);
@@ -75,42 +75,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const particlesConfigLight = {
         particles: {
-            number: { value: 100 },
-            color: { value: ["#0000ff", "#ff00ff", "#dd00ee"] },
+            number: { value: 75 },
+            color: { value: ["#0c4fa8", "#3a79c2", "#87add6"] },
             shape: {
                 type: ["circle"]
             },
             opacity: {
-                value: 0.7,
+                value: 0.42,
                 random: true
             },
             size: {
-                value: 4,
+                value: 3,
                 random: true
             },
             line_linked: {
-                enable: false
+                enable: true,
+                distance: 140,
+                color: "#6d8fb7",
+                opacity: 0.2,
+                width: 1
             },
             move: {
-                speed: 2,
-                out_mode: "bounce"
+                speed: 1.5,
+                out_mode: "out"
             }
         },
         interactivity: {
             events: {
-                onhover: { enable: true, mode: "bubble" },
+                onhover: { enable: true, mode: "grab" },
                 onclick: { enable: true, mode: "push" }
             },
             modes: {
-                bubble: {
-                    distance: 200,
-                    size: 8,
-                    duration: 2,
-                    opacity: 0.8,
-                    speed: 3
+                grab: {
+                    distance: 150,
+                    line_linked: {
+                        opacity: 0.45
+                    }
                 },
                 push: {
-                    particles_nb: 4
+                    particles_nb: 2
                 }
             }
         },
@@ -119,23 +122,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const particlesConfigDark = {
         particles: {
-            number: { value: 80 },
-            color: { value: "#ffffff" },
+            number: { value: 70 },
+            color: { value: ["#9bc6ff", "#5f95d1"] },
             shape: { type: "circle" },
-            opacity: { value: 0.5 },
+            opacity: { value: 0.4 },
             size: { value: 3 },
             line_linked: {
                 enable: true,
-                distance: 150,
-                color: "#ffffff",
-                opacity: 0.4,
+                distance: 135,
+                color: "#7caee3",
+                opacity: 0.3,
                 width: 1
             },
-            move: { speed: 2 }
+            move: { speed: 1.4 }
         },
         interactivity: {
             events: {
-                onhover: { enable: true, mode: "repulse" }
+                onhover: { enable: true, mode: "grab" },
+                onclick: { enable: true, mode: "push" }
+            },
+            modes: {
+                grab: {
+                    distance: 145,
+                    line_linked: {
+                        opacity: 0.45
+                    }
+                },
+                push: {
+                    particles_nb: 2
+                }
             }
         }
     };
