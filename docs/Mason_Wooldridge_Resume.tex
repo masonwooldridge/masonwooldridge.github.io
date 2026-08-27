@@ -1,0 +1,84 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.42in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{microtype}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\definecolor{accent}{HTML}{17365D}
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{-3pt}\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+\setlist[itemize]{leftmargin=13pt,itemsep=1pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+\newcommand{\entry}[4]{%
+  \textbf{#1}\hfill #2\\
+  \textit{#3}\hfill \textit{#4}\vspace{-2pt}
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Mason Wooldridge}\\[-1pt]
+  Lexington, KY \enspace $\vert$ \enspace +1 (502) 330-6462 \enspace $\vert$ \enspace
+  \href{mailto:mason.tyler.wooldridge@gmail.com}{mason.tyler.wooldridge@gmail.com}\\[-1pt]
+  \href{https://linkedin.com/in/mason-wooldridge}{linkedin.com/in/mason-wooldridge} \enspace $\vert$ \enspace
+  \href{https://github.com/masonwooldridge}{github.com/masonwooldridge}
+\end{center}
+
+\section{Education}
+\textbf{University of Kentucky}, Lexington, KY \hfill Expected May 2027\\
+B.S. Computer Science, B.S. Artificial Intelligence, B.S. Mathematics, B.S. Mathematical Economics \hfill GPA: 3.80/4.00\\
+National Merit Finalist; Presidential Scholarship Recipient\\
+\textit{Coursework:} Artificial Intelligence, Machine Learning, Theory of Computation, Software Engineering, Database Systems
+
+\section{Software Engineering Experience}
+\entry{IT Development Co-Op}{May 2025 -- Aug 2026}{Valvoline Global Operations}{Lexington, KY}
+\begin{itemize}
+  \item Completed 150 story points across 25 Agile sprints while developing and maintaining enterprise applications with Java, Spring Boot, Hibernate, Angular, and relational databases.
+  \item Translated business requirements into production-ready features spanning REST APIs, persistence layers, and responsive web interfaces.
+  \item Partnered with engineers, analysts, and stakeholders throughout refinement, implementation, code review, testing, debugging, and application support.
+  \item Contributed to AI-enabled workflow automation and intelligent business applications within an enterprise environment.
+\end{itemize}
+
+\entry{Teaching Assistant \& Academic Tutor}{Aug 2024 -- Present}{University of Kentucky}{Lexington, KY}
+\begin{itemize}
+  \item Lead CS 115 Python labs, hold office hours, grade assignments, and help students debug programs and strengthen core programming skills.
+  \item Tutor undergraduate mathematics students and mentor first-year engineers in project development, problem solving, and collaborative design.
+\end{itemize}
+
+\section{Technical Skills}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}l@{\hspace{8pt}}X@{}}
+Languages & Java, Python, C, C++, JavaScript, TypeScript, Swift, SQL, MATLAB, HTML/CSS \\
+Frameworks \& Libraries & Spring Boot, Hibernate, Angular, React, Flask, SwiftUI, PyTorch, scikit-learn, NumPy, pandas \\
+Tools \& Platforms & Git, GitHub, Linux, MySQL, Maven, Docker, VS Code, Xcode \\
+Engineering & Agile/Scrum, REST APIs, object-oriented design, data structures and algorithms, unit/integration testing, CI/CD \\
+\end{tabularx}
+
+\section{Projects}
+\textbf{AI Research Assistant} \hfill University of Kentucky
+\begin{itemize}
+  \item Conduct undergraduate research with Dr. Brent Harrison on AI-based intelligent tutoring systems for mathematical problem solving.
+\end{itemize}
+\textbf{Pyraminx Solver Using A* Search} \hfill C++
+\begin{itemize}
+  \item Designed a puzzle-state model, A* solver, and custom heuristic to efficiently find minimum-move solutions.
+\end{itemize}
+\textbf{Personal Portfolio Website} \hfill JavaScript, Three.js, WebGL
+\begin{itemize}
+  \item Built and deployed a responsive portfolio showcasing technical projects, professional experience, and skills.
+\end{itemize}
+
+\section{Leadership \& Activities}
+\textbf{YoungLife Leader} \hfill Aug 2025 -- Present\\
+Mentor middle school students through weekly meetings, small groups, Bible studies, and one-on-one relationship building.\\[2pt]
+\textbf{Competitive Programming Club, University of Kentucky} \hfill Jan 2026 -- Present\\
+Practice contest-style algorithmic problem solving, data structures, and time-complexity analysis with peers.
+
+\end{document}
